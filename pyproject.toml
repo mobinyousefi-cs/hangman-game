@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hangman-game-mobinyousefi-cs"
+version = "0.1.0"
+description = "A clean, testable CLI Hangman game (src layout, CI-ready)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Mobin Yousefi" }]
+keywords = ["hangman", "cli", "game", "python"]
+dependencies = []
+
+[project.scripts]
+hangman = "hangman_game.main:main"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+lint.select = ["E", "F", "I", "B", "UP"]
+lint.ignore = ["E501"]
+src = ["src"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["hangman_game*"]
