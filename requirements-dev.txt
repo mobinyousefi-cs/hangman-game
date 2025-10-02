@@ -1,0 +1,10 @@
+# Development & testing dependencies
+
+# Testing
+pytest>=7.0
+
+# Formatting
+black>=24.0
+
+# Linting
+ruff>=0.5.0

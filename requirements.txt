@@ -1,0 +1,2 @@
+# Core runtime requirements
+# (Hangman is stdlib-only, so nothing is needed here)
